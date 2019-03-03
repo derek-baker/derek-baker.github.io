@@ -31,13 +31,13 @@ export class Star {
     }
 
     // ALGORITHM     
-    //      A = (RA_hours * 15) + (RA_minutes * 0.25) + (RA_seconds * 0.004166)
-    //      B = ( ABS(Dec_degrees) + (Dec_minutes / 60) + (Dec_seconds / 3600)) * SIGN(Dec_Degrees)
+    //      A = (RightAscension_hours * 15) + (RightAscension_minutes * 0.25) + (RightAscension_seconds * 0.004166)
+    //      B = ( ABS(Declination_degrees) + (Declination_minutes / 60) + (Declination_seconds / 3600)) * SIGN(Declination_Degrees)
     //      C = distance in light years or parsecs
     //      X = (C * cos(B)) * cos(A)
     //      Y = (C * cos(B)) * sin(A)
     //      Z = C * sin(B)
-    // EXAMPLE CONVERSIONS
+    // EXAMPLE OUTPUTS OF CONVERSION
     //      Tau Ceti: X1 = 10.283036, Y1 = 5.019159, Z1 = -3.267598
     //      BY Draconis: X2 = 4.898169, Y2 = -32.842914, Z2 = 42.075062
     private _convertToCartesian(rightAscension: number, declinationDegrees: number, distance: number ): ICartesians {
