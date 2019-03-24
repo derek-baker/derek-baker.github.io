@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Stars</title>
+    <title>AST Flashcards</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
                             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">     
 <style>
@@ -25,7 +25,7 @@ html,body {
                 </div>
                 <div v-for="question in questions" class="carousel-item">
                     <div class="bg-warning"><h3>{{ question.question }}</h3></div>
-                    <button v-on:click="showAnswer">Toggle Answer</button>
+                    <button v-on:click="showAnswer" class="btn btn-light btn-lg">Toggle Answer</button>
                     <div v-if="answerVisible" class="bg-primary"><h3>{{ question.answer }}</h3></div>                    
                 </div>
                 
