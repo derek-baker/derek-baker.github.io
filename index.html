@@ -3,140 +3,125 @@
 <head>
     <meta charset="utf-8">
     <title>Stars</title>
-    <style>
-        #container {
-            height: 400px; 
-            min-width: 310px; 
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+                            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">     
+<style>
+html,body {
+  height: 100%;
+}
+.padding {
+    padding: 20%;
+}
+</style>
 </head>
 
 <body>
-    <div id="container" style="height: 500px"></div>
+    
+    <div class="h-100 container-fluid bg-dark text-center">
+        <div id="carousel" class="carousel slide h-100 align-items-center" data-ride="carousel">
+            <div id="Questions" class="carousel-inner padding">
+                <div class="carousel-item active bg-success">
+                    <h3>Things to study for AST222</h3>
+                </div>
+                <div v-for="question in questions" class="carousel-item">
+                    <div class="bg-warning"><h3>{{ question.question }}</h3></div>
+                    <button v-on:click="showAnswer">Toggle Answer</button>
+                    <div v-if="answerVisible" class="bg-primary"><h3>{{ question.answer }}</h3></div>                    
+                </div>
+                
+            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-<script src="lib/highcharts.js"></script>
-<script src="lib/highcharts-3d.js"></script>
-<script src="lib/exporting.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<script src="dist/bundle.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script>
-console.log(stars);
-const starData = stars;
-
-$(function () {
-    // Give the points a 3D feel by adding a radial gradient
-    Highcharts.getOptions().colors = $.map(Highcharts.getOptions().colors, function (color) {
-        return {
-            radialGradient: {
-                cx: 0.4,
-                cy: 0.3,
-                r: 0.5
+const studyQuestions = [
+            { 
+                question: 'Stars in belt of Orion? Name two stars not in the belt?', 
+                answer: 'Alnitak, Alnilam, Mintaka (Others not in belt: Saiph, Rigel)' 
             },
-            stops: [
-                [0, color],
-                [1, Highcharts.Color(color).brighten(-0.2).get('rgb')]
-            ]
-        };
-    });
-    // Set up the chart
-    var chart = new Highcharts.Chart({
-        chart: {
-            renderTo: 'container',
-            margin: 100,
-            type: 'scatter',
-            options3d: {
-                enabled: true,
-                alpha: 10,
-                beta: 30,
-                depth: 250,
-                viewDistance: 5,
-
-                frame: {
-                    bottom: { size: 1, color: 'rgba(0,0,0,0.02)' },
-                    back: { size: 1, color: 'rgba(0,0,0,0.04)' },
-                    side: { size: 1, color: 'rgba(0,0,0,0.06)' }
-                }
-            }
-        },
-        title: {
-            text: 'Draggable box'
-        },
-        subtitle: {
-            text: 'Click and drag the plot area to rotate in space'
-        },
-        tooltip: {
-            formatter: function(chart) {
-                var p = this.point;
-                return `${p.name}<br>Right Ascension: ${p.rightAscension}<br>Declination: ${p.declination}<br>Distance In Parsecs: ${p.distance}`;
-            }
-        },
-        plotOptions: {
-            // scatter: {
-            //     width: 500,
-            //     height: 500,
-            //     depth: 500
-            // }
-        },
-        yAxis: {
-            min: -200,
-            max: 100,
-            title: null
-        },
-        xAxis: {
-            min: -75,
-            max: 40,
-            gridLineWidth: 1
-        },
-        zAxis: {
-            min: -200,
-            max: 200
-        },
-        legend: {
-            enabled: false
-        },
-        series: [{
-            name: 'Stars',
-            colorByPoint: true,
-            data: starData
-        }]
-    });
-
-    // Add mouse events for rotation
-    $(chart.container).bind('mousedown.hc touchstart.hc', function (e) {
-        e = chart.pointer.normalize(e);
-
-        var posX = e.pageX,
-            posY = e.pageY,
-            alpha = chart.options.chart.options3d.alpha,
-            beta = chart.options.chart.options3d.beta,
-            newAlpha,
-            newBeta,
-            sensitivity = 5; // lower is more sensitive
-
-        $(document).bind({
-            'mousemove.hc touchdrag.hc': function (e) {
-                // Run beta
-                newBeta = beta + (posX - e.pageX) / sensitivity;
-                newBeta = Math.min(100, Math.max(-100, newBeta));
-                chart.options.chart.options3d.beta = newBeta;
-                // Run alpha
-                newAlpha = alpha + (e.pageY - posY) / sensitivity;
-                newAlpha = Math.min(100, Math.max(-100, newAlpha));
-                chart.options.chart.options3d.alpha = newAlpha;
-                chart.redraw(false);
+            { 
+                question: 'Alpha star in Cepheus?', 
+                answer: 'Alderamin/Cephei' 
             },
-            'mouseup touchend': function () {
-                $(document).unbind('.hc');
+            { 
+                question: '5 stars in aphorism of Big Dipper/Ursa-Major?', 
+                answer: 'Pointers are: Merak, Dubhe. Others are: Alkaid, Mizar, Alioth' 
+            },
+            { 
+                question: 'Alpha star in Scorpius? What type of star is it?', 
+                answer: 'Antares/Scorpii (which is a super giant red star)' 
+            },
+            { 
+                question: 'Two stars from Gemini? Which was immortal? Who fathered the twins?', 
+                answer: 'Castor and Pollux(mythical character was immortal) (Zeus fathered both twins)' 
+            },
+            { 
+                question: 'Two stars from Perseus? Who did he rescue? What was his magic horse\'s name? Name of monster he killed?', 
+                answer: 'Mirfak, Algol(winking demon). Andromeda, Pegasus, Cetus' 
+            },
+            { 
+                question: 'Alpha star in Cygnus?', 
+                answer: 'Deneb' 
+            },
+            { 
+                question: '3 stars in Leo Major?', 
+                answer: 'Regulus(heart of the lion), Denebola(tail), Algiebra' 
+            },
+            { 
+                question: 'Brightest star in Virgo?', 
+                answer: 'Spica' 
+            },
+            { 
+                question: '2 stars from Taurus? What is M45?', 
+                answer: 'Aldebaran, Elnath, Pleides(The Seven Sisters and Subaru' 
+            },
+            { 
+                question: 'Alpha star in Bootes? What does Bootes mean?', 
+                answer: 'Arcturus. It means: herdsman.' 
+            },
+            { 
+                question: 'Name alpha star in Lyra? What does lyra mean?', 
+                answer: 'Vega. It means harp' 
             }
-        });
-    });
+        ]
+const vm = new Vue({
+    el: '#Questions',
+    data: {
+        answerVisible: false,
+        questions: studyQuestions
+    },
+    methods: {
+        showAnswer: function () {
+            this.answerVisible = !this.answerVisible;
+        },
+        hideAnswer: function () {
+            this.answerVisible = false;
+        }
+    }
 });
+$('#carousel').on('slide.bs.carousel', function () {
+    vm.hideAnswer();
+})
+</script> 
 
-</script>    
+
 
 </body>
 </html>

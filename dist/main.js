@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const star_1 = require("./star");
 const data_1 = require("./data");
+const vue_questions_1 = require("./index/vue.questions");
+console.log(vue_questions_1.vueInstance);
 const convertData = (starData) => {
     let stars = [];
     starData.forEach((item) => {

@@ -1,6 +1,8 @@
-import { Star } from "./star"
-import { starData } from "./data"
+import { Star } from "./star";
+import { starData } from "./data";
 
+// import { vueInstance } from "./index/vue.questions";
+// console.log(vueInstance);
 
 const convertData = (starData: any): Star[] => {
     let stars: Star[] = [];
