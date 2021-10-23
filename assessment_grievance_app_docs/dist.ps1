@@ -1,11 +1,15 @@
-param($workDir = $PSScriptRoot)
+param(
+    $workDir = $PSScriptRoot,
+    $cleanExcludes = @('assessment_grievance_app_docs', '.git')
+)
 
 $initialLocation = Get-Location
 
 try {
-    npm run build
     Set-Location $workDir
-    Copy-Item -Path ./dist/**/* -Destination ../ -Verbose 
+    npm run build
+    Get-ChildItem -Path ../ -Exclude $cleanExcludes | Remove-Item -Force 
+    Copy-Item -Recurse -Path ./dist/* -Destination ../ -Container -Verbose 
 }
 catch {
     $_
