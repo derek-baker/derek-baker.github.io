@@ -1,4 +1,4 @@
-# assessment_grievanc_app_docs
+# Assessment Grievance App Docs
 
 ## Project setup
 ```
