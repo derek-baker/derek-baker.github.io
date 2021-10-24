@@ -121,7 +121,7 @@ export default {
       your own instance(s) of the app using tooling in the repository. However,
       the default configuration of the app is deployed using managed cloud
       services from Google Cloud Platform (GCP). The Github repository contains
-      information on deploying and running the app.
+      <a href="https://github.com/derek-baker/nys-assessment-grievance-app" target="_blank">information on deploying and running the app.</a>
     </ul>
 
     <ul>
