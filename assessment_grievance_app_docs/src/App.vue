@@ -19,10 +19,22 @@ export default {
 </template>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap');
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Zen Kaku Gothic New', Helvetica, sans-serif;    
+  }
+
+  .greyText {
+    color: #5b666e;
+    font-weight: bold;
+  }
+
+  :target {
+    background: yellow;
+  }
+
+  .inlineBlock {
+    display: inline-block;
   }
 
   body {
@@ -41,24 +53,6 @@ export default {
     height: -webkit-fill-available;
     max-height: 100vh;
     overflow-x: auto;
-    /* overflow-y: hidden; */
-  }
-
-  .b-example-divider {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid rgba(0, 0, 0, 0.15);
-    border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-      inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-  }
-
-  .bi {
-    vertical-align: -0.125em;
-    pointer-events: none;
-    fill: currentColor;
   }
 
   .dropdown-toggle {
