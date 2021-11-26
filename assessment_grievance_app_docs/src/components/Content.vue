@@ -124,14 +124,14 @@ export default {
       <a href="https://github.com/derek-baker/nys-assessment-grievance-app" target="_blank">information on deploying and running the app.</a>
     </ul>
 
-    <ul>
+    <!--<ul>
       <h4 class="greyText inlineBlock" v-bind:id="sections.hostingOptions.saas.id">
         {{ sections.hostingOptions.saas.title }}
       </h4>
       If you're not interested or able to purchase your own cloud services from
       GCP, you can inquire about purchasing a subscription to a hosted version
-      of the app by emailing info@bakersoftware.solutions.
-    </ul>
+      of the app by emailing 
+    </ul>-->
 
     <div class="extraPadding"></div>
   </div>
