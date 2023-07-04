@@ -1,24 +1,9 @@
 import SectionContainer from "./SectionContainer";
-const socialIcon = [
+const socialIcons = [  
   {
-    id: 1,
-    iconName: "icon-facebook-squared",
-    link: "https://www.facebook.com/",
-  },
-  {
-    id: 2,
-    iconName: "icon-twitter-squared",
-    link: "https://twitter.com/",
-  },
-  {
-    id: 3,
-    iconName: "icon-behance-squared",
-    link: "https://www.behance.net/",
-  },
-  {
-    id: 4,
+    id: 0,
     iconName: "icon-linkedin-squared",
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/derek-baker-270a9812b/",
   },
 ];
 const Home = () => {
@@ -40,15 +25,14 @@ const Home = () => {
             </div>
             <div className="details ml-[80px]">
               <h3 className="name text-[55px] font-extrabold uppercase mb-[14px]">
-                Adriano <span>Smith</span>
+                Derek <span>Baker</span>
               </h3>
               <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
-                I am a WordPress Developer at heart and create features that are
-                best suited for the job at hand.
+                I like building things. This is my personal site. I used a template.
               </p>
               <div className="social w-full float-left">
                 <ul className="m-0 list-none">
-                  {socialIcon.map((item) => (
+                  {socialIcons.map((item) => (
                     <li className="mr-[8px] inline-block" key={item.id}>
                       <a
                         className="text-black text-[20px] transition-all duration-300 hover:text-black"

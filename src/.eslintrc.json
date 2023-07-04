@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals"
+  ],
+
+   // Specifying parser because: https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
+   "parser": "espree",
+   "parserOptions": {
+     "ecmaVersion": 2020
+   },
+   
+   "rules": {
+    "no-undef": "error"
+   }
+}
