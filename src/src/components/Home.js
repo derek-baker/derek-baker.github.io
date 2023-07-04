@@ -28,7 +28,7 @@ const Home = () => {
                 Derek <span>Baker</span>
               </h3>
               <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
-                I like building things. This is my personal site. I used a template.
+                This is my personal site. I used a template.
               </p>
               <div className="social w-full float-left">
                 <ul className="m-0 list-none">

@@ -7,7 +7,7 @@ const Intro = () => {
       </div>
       <div className="about_title w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[20px] mb-[30px]">
         <h3 className="text-[22px] font-bold">Derek Baker</h3>
-        <span>Web Developer</span>
+        <span>Software Engineer</span>
       </div>
       <div className="about_text w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[31px] mb-[30px]">
         <p className="mb-[11px]">
@@ -22,23 +22,11 @@ const Intro = () => {
         <div className="left w-1/2 pr-[50px]">
           <div className="tokyo_tm_info w-full h-auto clear-both float-left">
             <ul className="m-0 list-none">
-              {/* <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Birthday:
-                </span>
-                <span>01.07.1990</span>
-              </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Age:
+                  Specialties:
                 </span>
-                <span>32</span>
-              </li> */}
-              <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Address:
-                </span>
-                <span>Ave 11, New York, USA</span>
+                <span>System Development, DevOps, Cloud</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
@@ -49,20 +37,7 @@ const Intro = () => {
                     className="text-[#767676] transition-all duration-300 hover:text-black"
                     href="mailto:tokyo@gmail.com"
                   >
-                    tokyo@gmail.com
-                  </a>
-                </span>
-              </li>
-              <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Phone:
-                </span>
-                <span>
-                  <a
-                    className="text-[#767676] transition-all duration-300 hover:text-black"
-                    href="tel:+77 022 177 05 05"
-                  >
-                    +77 022 177 05 05
+                    TODO
                   </a>
                 </span>
               </li>
@@ -77,30 +52,12 @@ const Intro = () => {
                   Location:
                 </span>
                 <span>Northeastern US</span>
-              </li>
-              {/* <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Study:
-                </span>
-                <span>Univercity of Texas</span>
-              </li> */}
-              {/* <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Degree:
-                </span>
-                <span>Master</span>
-              </li> */}
+              </li>              
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Interest:
+                  Interests:
                 </span>
-                <span>Playing Football</span>
-              </li>
-              <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Freelance:
-                </span>
-                <span>Available</span>
+                <span>Building things. Learning to play the drums.</span>
               </li>
             </ul>
           </div>
@@ -108,7 +65,7 @@ const Intro = () => {
       </div>
       <div className="tokyo_tm_button" data-position="left">
         <a href="assets/img/cv/1.jpg" download>
-          <span>Download CV</span>
+          <span>Download Resume (TODO)</span>
         </a>
       </div>
     </Fragment>
