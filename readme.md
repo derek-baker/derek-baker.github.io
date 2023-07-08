@@ -2,7 +2,8 @@
 
 ## How is the project laid out?
 - The `src` directory contains the files used to generate the site.
-- Because the site is "deployed" to Github Pages, the build outputs static files in the `docs/` folder. 
+- Because the site is "deployed" to Github Pages, the build outputs static files in the `docs` directory.
+    - [Github Pages docs](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
 
 ## How do I install dependencies?
 ``` bash
