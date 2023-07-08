@@ -52,9 +52,8 @@ export const tokyo = {
     }
     if (myCursor.length) {
       if (document.body) {
-        let n,
-          i = 0,
-          o = !1;
+        // eslint-disable-next-line no-unused-vars
+        let n, i = 0, o = !1;
         (window.onmousemove = function (s) {
           // console.log(document.querySelector(this));
           o ||

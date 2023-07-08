@@ -39,13 +39,13 @@ const NewsModal = () => {
       <div className="main_content w-full float-left">
         <div className="descriptions w-full float-left">
           <p className="bigger text-[#888] text-[20px] mb-[31px]">
-            Just because we can't get out and about like we normally would,
-            doesn’t mean we have to stop taking pictures. There’s still plenty
-            you can do, provided you're prepared to use some imagination. Here
+            Just because we can&#39;t get out and about like we normally would,
+            doesn&#39;t mean we have to stop taking pictures. There&#39;s still plenty
+            you can do, provided you&#39;re prepared to use some imagination. Here
             are a few ideas to keep you shooting until normal life resumes.
           </p>
           <p className="mb-[22px]">
-            Most photographers love to shoot the unusual, and you don’t get much
+            Most photographers love to shoot the unusual, and you don&#39;t get much
             more unusual than These Unprecedented Times. Right now everything
             counts as out of the ordinary. There are a number of remarkable
             things about these lockdown days that are worth photographing now so

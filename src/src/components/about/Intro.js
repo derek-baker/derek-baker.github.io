@@ -26,7 +26,7 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Specialties:
                 </span>
-                <span>System Development, DevOps, Cloud</span>
+                <span>Systems Development, Cloud, DevOps</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
@@ -51,13 +51,13 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Location:
                 </span>
-                <span>Northeastern US</span>
+                <span>Northeastern USA</span>
               </li>              
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Interests:
                 </span>
-                <span>Building things. Learning to play the drums.</span>
+                <span>Building things. Noodling with instruments.</span>
               </li>
             </ul>
           </div>

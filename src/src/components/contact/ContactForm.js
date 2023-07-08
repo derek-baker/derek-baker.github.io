@@ -24,6 +24,7 @@ const ContactForm = () => {
           "Q3pccdLZhU-mZT7tQ" // public api
         )
         .then(
+          // eslint-disable-next-line no-unused-vars
           (response) => {
             setError(false);
             clearError();
