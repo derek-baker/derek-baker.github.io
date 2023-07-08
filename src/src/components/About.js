@@ -1,6 +1,6 @@
-import SectionContainer from "../SectionContainer";
-import SectionTitle from "../SectionTitle";
-import Intro from "../about/Intro";
+import SectionContainer from "./SectionContainer";
+import SectionTitle from "./SectionTitle";
+import Intro from "./about/Intro";
 // import KnowledgeInterests from "./about/KnowledgeInterests";
 // import EducationExperience from "./about/EducationExperience";
 // import Skills from "./about/Skills";
