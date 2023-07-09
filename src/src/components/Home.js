@@ -30,6 +30,9 @@ const Home = () => {
               <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
                 This is my personal site. I used a template.
               </p>
+              
+              <a href="https://stackexchange.com/users/10030726/derekbaker783"><img src="https://stackexchange.com/users/flair/10030726.png" width="208" height="58" alt="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+              
               <div className="social w-full float-left">
                 <ul className="m-0 list-none">
                   {socialIcons.map((item) => (

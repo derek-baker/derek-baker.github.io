@@ -4,6 +4,8 @@ const nextConfig = {
   
   // https://nextjs.org/docs/pages/building-your-application/deploying/static-exports#configuration
   output: 'export',
+  // trailingSlash: true,
+
   distDir: '../docs',
   // basePath: '/docs',
   // assetPrefix: '/docs/',
