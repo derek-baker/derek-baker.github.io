@@ -9,6 +9,9 @@ const Sidebar = () => {
         <div className="logo" data-type="image">
           {" "}
           {/* You can use image or text as logo. data-type values are: "image" and "text" */}
+          <a href="https://stackexchange.com/users/10030726/derekbaker783">
+              <img src="https://stackexchange.com/users/flair/10030726.png" width="208" height="58" alt="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
+            </a>
           {/* <a href="#">
             <img
               className="max-w-[150px]"
@@ -20,7 +23,7 @@ const Sidebar = () => {
             </h3>
           </a> */}
         </div>
-        <div className="menu px-[0px] py-[50px] w-full float-left">
+        <div className="menu px-[0px] py-[0px] w-full float-left">
           <ul className="transition_link m-0 list-none">
             {menus.map((menu) => (
               <li

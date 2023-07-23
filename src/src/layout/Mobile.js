@@ -11,16 +11,20 @@ const Mobile = () => {
           <div className="logo" data-type="image">
             {" "}
             {/* You can use image or text as logo. data-type values are "image" and "text" */}
-            <a href="#">
+            <a href="https://stackexchange.com/users/10030726/derekbaker783">
+              <img src="https://stackexchange.com/users/flair/10030726.png" width="156" height="43" alt="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
+            </a>
+            
+            {/* <a href="#">
               <img
                 className="max-w-[100px] max-h-[40px]"
-                src="assets/img/logo/dark.png"
-                alt="image"
+                src="assets/img/headshot.jpg"
+                alt="Headshot of Derek Baker"
               />
               <h3 className="font-black font-poppins text-[25px] tracking-[4px]">
                 TOKYO
               </h3>
-            </a>
+            </a> */}
           </div>
           <div className="trigger relative top-[5px]">
             <div

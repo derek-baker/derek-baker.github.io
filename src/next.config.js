@@ -6,7 +6,9 @@ const nextConfig = {
   output: 'export',
   // trailingSlash: true,
 
-  distDir: '../docs',
+  // distDir: '../docs',
+  distDir: 'out'
+
   // basePath: '/docs',
   // assetPrefix: '/docs/',
 }

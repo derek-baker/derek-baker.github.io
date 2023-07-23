@@ -7,7 +7,7 @@ const Intro = () => {
       </div>
       <div className="about_title w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[20px] mb-[30px]">
         <h3 className="text-[22px] font-bold">Derek Baker</h3>
-        <span>Software Engineer</span>
+        <span>Software Engineer specializing in Dark Matter Development</span>
       </div>
       <div className="about_text w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[31px] mb-[30px]">
         <p className="mb-[11px]">
@@ -35,7 +35,7 @@ const Intro = () => {
                 <span>
                   <a
                     className="text-[#767676] transition-all duration-300 hover:text-black"
-                    href="mailto:tokyo@gmail.com"
+                    href="mailto:todo@todo.com"
                   >
                     TODO
                   </a>

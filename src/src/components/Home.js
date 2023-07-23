@@ -5,6 +5,16 @@ const socialIcons = [
     iconName: "icon-linkedin-squared",
     link: "https://www.linkedin.com/in/derek-baker-270a9812b/",
   },
+  {
+    id: 1,
+    iconName: "icon-github-squared",
+    link: "https://github.com/derek-baker",
+  },
+  {
+    id: 2,
+    iconName: "icon-stackoverflow-1",
+    link: "https://stackoverflow.com/users/7417433/derekbaker783?tab=topactivity",
+  }
 ];
 const Home = () => {
   return (
@@ -27,11 +37,15 @@ const Home = () => {
               <h3 className="name text-[55px] font-extrabold uppercase mb-[14px]">
                 Derek <span>Baker</span>
               </h3>
-              <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
-                This is my personal site. I used a template.
+              <p className="job font-montserrat font-extrabold max-w-[450px] mb-[25px]">
+                Dark Matter Developer Extraordinaire
               </p>
-              
-              <a href="https://stackexchange.com/users/10030726/derekbaker783"><img src="https://stackexchange.com/users/flair/10030726.png" width="208" height="58" alt="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for derekbaker783 on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+              <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
+                This is my personal site.
+              </p>
+              <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
+                I used a template.
+              </p>
               
               <div className="social w-full float-left">
                 <ul className="m-0 list-none">
