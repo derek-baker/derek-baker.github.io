@@ -12,7 +12,7 @@ const nextConfig = {
   // When building an artifact for deployment, use this setting
   distDir: '../docs',
   // basePath: '/docs',
-  assetPrefix: '/docs/',
+  // assetPrefix: '/docs/',
 }
 
 module.exports = nextConfig
