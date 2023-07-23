@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "export IS_DEV_ENV=true && next dev",
+    "build": "export IS_DEV_ENV=false && next build && touch ../docs/.nojekyll",
+    "start": "export IS_DEV_ENV=false && next start",
     "lint": "next lint"
   },
   "dependencies": {

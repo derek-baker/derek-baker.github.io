@@ -5,6 +5,10 @@
 - Because the site is "deployed" to Github Pages, the build outputs static files in the `docs` directory.
     - [Github Pages docs](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
 
+## What software is required to build and run the app?
+- NodeJS (v16 or greater should be fine) & NPM
+- Bash (the NPM scripts assume you can use Bash)
+
 ## How do I install dependencies?
 ``` bash
 cd <REPO_ROOT>/src
