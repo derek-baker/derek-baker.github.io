@@ -20,12 +20,15 @@ npm install
 cd <REPO_ROOT>/src
 npm run build
 ```
-See the `package.json` for more details.
+See the `package.json` file for more details.
+
+## Why does the production build create a `.nojekyll` file?
+Because if we allow Github Pages' default `Build with Jekyll` step to run, folders with names beginning with underscores are not served (EX: `_next/`). See [this issue](https://github.com/vercel/next.js/issues/2029) for more details.
 
 ## How do I run it?
 ``` bash
 cd <REPO_ROOT>/src
 npm run dev
 ```
-See the `package.json` for more details.
+See the `package.json` file for more details.
 
