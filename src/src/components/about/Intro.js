@@ -26,12 +26,14 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Specialties:
                 </span>
+                <br></br>
                 <span>Systems Development, Cloud, DevOps</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Email:
                 </span>
+                <br></br>
                 <span>
                   <a
                     className="text-[#767676] transition-all duration-300 hover:text-black"
@@ -51,12 +53,14 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Location:
                 </span>
+                <br></br>
                 <span>Northeastern USA</span>
               </li>              
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Interests:
                 </span>
+                <div><br></br></div>
                 <span>Building things. Noodling with instruments.</span>
               </li>
             </ul>
