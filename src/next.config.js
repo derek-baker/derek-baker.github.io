@@ -6,10 +6,12 @@ const nextConfig = {
   output: 'export',
   // trailingSlash: true,
 
+  // When developing, use this setting
   // distDir: 'out'
 
+  // When building an artifact for deployment, use this setting
   distDir: '../docs',
-  basePath: '/docs',
+  // basePath: '/docs',
   assetPrefix: '/docs/',
 }
 
